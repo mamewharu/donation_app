@@ -12,4 +12,6 @@ class User < ApplicationRecord
           # 半角英字数字のみ許可する
           validates :nickname, format: {with: /\A[a-z0-9]+\z/i, message: "is invalid. Input half-width characters."}
         end
+
+   has_many :donations
 end
